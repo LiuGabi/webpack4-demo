@@ -1,0 +1,22 @@
+<div class='lxgs-login'>
+	<div class='login-wrapper'>
+		<span class="logo">DEMO系统</span>
+		<div class="account">
+			<!-- 密码登陆 -->
+				<p class="title">DEMO号密码登录</p>
+				<el-form ref="login" :model="loginData" :rules="loginDataRules">
+					<el-form-item prop='username'>
+						<el-input type='text' v-model="loginData.username" class='user' placeholder="用户名"></el-input>
+					</el-form-item>
+
+					<el-form-item prop='password'>
+						<el-input type='password' v-model="loginData.password" class='password' placeholder='密   码' @keyup.enter.native="submit('login')"></el-input>
+					</el-form-item>
+					
+					<el-form-item>
+						<el-button :loading="loading" type="primary" class="submit" @click='submit("login")'>登录</el-button>
+					</el-form-item>
+				</el-form>
+		</div>
+	</div>
+</div>

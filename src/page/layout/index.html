@@ -1,0 +1,38 @@
+<el-container class="lxgs-container">
+	<!-- Header -->
+	<el-header class="lxgs-header" height='40px'>
+		<span class="lxgs-logo">DEMO系统</span>		
+		
+		<ul class="lxgs-info">
+			<li @click="logout">退出系统</li>
+		</ul>
+	</el-header>
+
+	<el-container>
+		<!-- Sidebar -->
+		<el-aside width="180px">
+			<el-menu
+				:router='true'
+				:default-active="activeIndex"
+				class='lxgs-menubar'
+				background-color='#383d42'
+				text-color='#c4c5c7'
+				active-text-color="#fff"
+				@select='select'
+				:unique-opened='true'>
+				<el-menu-item index="dashboard">
+					<i class="lxgs-icon-home"></i> <span slot="title">Dashboard</span>
+				</el-menu-item>
+			</el-menu>
+		</el-aside>
+
+		<!-- Content -->
+		<el-container>
+			<el-main>
+				<transition>
+					<router-view></router-view>
+				</transition>
+			</el-main>
+		</el-container>
+	</el-container>
+</el-container>
