@@ -1,7 +1,7 @@
 {
-  "name": "lw-web-finance",
+  "name": "webpack4-demo",
   "version": "1.0.0",
-  "description": "Lao wu finance system.",
+  "description": "Webpack4-demo system.",
   "author": "Gabi",
   "license": "ISC",
   "scripts": {
